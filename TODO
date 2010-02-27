@@ -4,6 +4,7 @@ there're the milestones for .1 & .2 versions.
 
 version 0.1
 ===========
+send data trought post metod
 write methods for all service commands
 write complete parsing for all commands
 strip flightsmslib.py in 3 files (base class, utils and parser)
