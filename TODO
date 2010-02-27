@@ -4,11 +4,10 @@ there're the milestones for .1 & .2 versions.
 
 version 0.1
 ===========
-send data trought post metod
-write methods for all service commands
-write complete parsing for all commands
-strip flightsmslib.py in 3 files (base class, utils and parser)
-fix incomplete some utility-functions
+complete writing methods for all major service commands
+code parsing for all built-in commands
+strip flightsmslib.py in 3 separated files (base class, utils and parser)
+fix incomplete utility-functions
 
 version 0.2
 ===========
@@ -17,4 +16,4 @@ create external phonebook
 
 version 0.3
 ===========
-is flightsms still alive?
+will flightsms still alive?
