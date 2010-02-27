@@ -1,8 +1,19 @@
-there're the milestone for .1 & .2 versions.
+FLIGHTSMS - TODO LIST
 
-v0.1
-all service commands and parsing
+there're the milestones for .1 & .2 versions.
 
-v0.2
-message archive
-phonebook
+version 0.1
+===========
+write methods for all service commands
+write complete parsing for all commands
+strip flightsmslib.py in 3 files (base class, utils and parser)
+fix incomplete some utility-functions
+
+version 0.2
+===========
+write internal message archive
+create external phonebook
+
+version 0.3
+===========
+is flightsms still alive?
