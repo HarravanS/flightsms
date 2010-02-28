@@ -1,7 +1,6 @@
 #-*- coding: utf-8 -*-
 
 import sqlite3.dbapi2 as sqlite
-import hashlib
 
 from conf import *
 
@@ -36,23 +35,13 @@ class settings:
 	 	dbcur.close()
 		connect.close()
 	
-	def set_LoginData(self,clear_username,clear_password):
-		#creating object for md5 handling
-		hash_username = hashlib.md5()
-		hash_password = hashlib.md5()
-		#add user and pass in hash
-		hash_username.update(clear_username)
-		hash_password.update(clear_password)
-		#put hash to variables in hexadecimal format
-		vola_username = hash_username.hexdigest()
-		vola_password = hash_password.hexdigest()
+	def set_LoginData(self,hash_username,hash_password):
 		#connect to database
 		connect = sqlite.connect(db_name)
 		dbcur=connect.cursor()
 		#insert new records
-		print "%s\n%s" % (vola_username,vola_password)
-		dbcur.execute("update userdata set value=? where id='user'", [vola_username])
-		dbcur.execute("update userdata set value=? where id='pass'",[vola_password])
+		dbcur.execute("update userdata set value=? where id='user'", [hash_username])
+		dbcur.execute("update userdata set value=? where id='pass'",[hash_password])
 		#database commit
 		connect.commit()
 		dbcur.close()

@@ -48,7 +48,7 @@ def settings_menu():
 	elif s_action == ("u" or "U"):
 		n_user = raw_input("insert new user: ")
 		n_pass = raw_input("insert new pass: ")
-		impostazioni.set_LoginData(n_user,n_pass)
+		impostazioni.set_LoginData(str2hash(n_user),str2hash(n_pass))
 		s_action = ""
 		settings_menu()
 	elif s_action == ("k" or "K"):
