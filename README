@@ -6,13 +6,13 @@ Flightsms is a project made entirely with free software: python and sqlite3.
 
 Install
 ========
-flightsms don't need installation. Just set user data by using test.py
+flightsms doesn't need installation. Just set user data by using test.py
 
 
 Usage
 ======
-Actually there isn't a GUI or a complete shell client.
-For internal base test we use test.py which allow you to send sms in terminal
+Actually there isn't a GUI or a complete text client.
+For internal base test we use test.py which allow you to send sms from terminal
 
 
 Authors
