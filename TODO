@@ -5,14 +5,15 @@ there're the milestones for .1 & .2 versions.
 version 0.1
 ===========
 complete writing methods for all major service commands
-code parsing for all built-in commands
-strip flightsmslib.py in 3 separated files (base class, utils and parser)
-fix incomplete utility-functions
+complete parsing for all built-in gateway commands
+strip flightsmslib.py in 4 separated files (conf, base class, utils and parser)
+improve utility functions
 
 version 0.2
 ===========
-write internal message archive
-create external phonebook
+fix known bugs
+integrate internal message archive
+integrate external phonebook
 
 version 0.3
 ===========
