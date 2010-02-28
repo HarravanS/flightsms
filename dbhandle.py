@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
 
 import sqlite3.dbapi2 as sqlite
+import hashlib
+
 from conf import *
 
 

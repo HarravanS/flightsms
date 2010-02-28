@@ -16,11 +16,13 @@ def main_menu():
 	if m_action == ("x" or "X"):
 		settings_menu()
 	elif m_action == ("m" or "M"):
+		username, password = loginUPData()
 		dest = raw_input("receiver: ")
 		smesg = raw_input("message: ")
-		messaggi.send_Message(1,"flightsms",[dest],smesg,"0000-00-00","00:00")
+		messaggi.send_Message(username,password,1,"flightsms",[dest],smesg,"0000-00-00","00:00")
 	elif m_action == ("c" or "C"):
-		print messaggi.get_Credit()
+		username, password = loginUPData()
+		print messaggi.get_Credit(username,password)
 		m_action = ""
 		main_menu()
 	elif m_action == "Q":
