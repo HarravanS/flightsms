@@ -1,5 +1,7 @@
 #-*- coding: utf-8 -*-
 
+import hashlib
+
 from dbhandle import *
 
 
@@ -23,3 +25,9 @@ def format_PhoneNumbers(phone_list):
 #url-encoding message content
 def encode_MessageText(content):
 	return urllib.quote(content.decode('utf-8').encode('iso-8859-1'))
+
+#clear to hex md5
+def str2hash(data):
+	hash_data = hashlib.md5()
+	hash_data.update(data)
+	return hash_data.hexdigest()
