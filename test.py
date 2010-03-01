@@ -22,7 +22,7 @@ def main_menu():
 		username, password = loginUPData()
 		dest = raw_input("receiver: ")
 		smesg = raw_input("message: ")
-		print parse_Result("14",messaggi.send_Message(username,password,1,"flightsms",[dest],smesg,"0000-00-00","00:00"))
+		print parse_Result("14",messaggi.send_Message(username,password,nextcid(),"flightsms",[dest],smesg,"0000-00-00","00:00"))
 	elif m_action == ("h" or "H"):
 		history_menu()
 	elif m_action == ("c" or "C"):
