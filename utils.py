@@ -41,15 +41,4 @@ def nextcid():
 	last = h.lastcid_History()
 	return (last + 1)
 
-try_h = smshistory()
-print "=" * 30 + "history:"
-try_h.show_History()
-try_h.add_History(1,"+393334455667","flightsms","this is a test","sent","ok",None,None)
-print "=" * 30 + "history:"
-try_h.show_History()
-print "\n\nnext cid is"
-print nextcid()
-try_h.clear_History()
-print "=" * 30 + "history:"
-try_h.show_History()
 	
