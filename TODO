@@ -6,14 +6,15 @@ version 0.1
 ===========
 complete writing methods for all major service commands
 complete parsing for all built-in gateway commands
+integrate internal message archive
 strip flightsmslib.py in 4 separated files (conf, base class, utils and parser)
 improve utility functions
 
 version 0.2
 ===========
 fix known issues
-integrate internal message archive
 integrate external phonebook
+first PyQt4 gui release ?
 
 version 0.3
 ===========
