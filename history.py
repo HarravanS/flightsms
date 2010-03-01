@@ -11,7 +11,8 @@ class smshistory():
 	def add_History(self, cid, receiver, sender, message, genre, status, orderid, notes):
 		connect = sqlite.connect(db_name)
 		dbcur=connect.cursor()
-		dbcur.execute("insert into history values (null,?,?,?,?,?,?,?,?)",(cid, receiver, sender, message, genre, status, orderid, notes))
+		dbcur.execute("insert into history values (?,?,?,?,?,?,?,?,?)",(None,cid, receiver, sender, message, genre, status, orderid, notes))
+		connect.commit()
 		dbcur.close()
 		connect.close()
 	
@@ -25,7 +26,8 @@ class smshistory():
 		dbcur.execute("select * from history")
 		self.history = dbcur.fetchall()
 		
-		print self.history
+		for row in self.history:
+			return row
 		
 		dbcur.close()
 		connect.close()
@@ -35,6 +37,7 @@ class smshistory():
 		connect = sqlite.connect(db_name)
 		dbcur=connect.cursor()
 		dbcur.execute("delete from history")
+		connect.commit()
 		dbcur.close()
 		connect.close()
 	
@@ -45,7 +48,7 @@ class smshistory():
 		dbcur.execute("select * from history order by cid desc")
 
 		self.cid_row = dbcur.fetchone()
-		return self.cid_row[1]
+		return int(self.cid_row[1])
 
 		dbcur.close()
 		connect.close()
