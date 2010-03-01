@@ -6,7 +6,7 @@ from conf import *
 
 
 #class to manage settings
-class settings:
+class usersetup:
 	
 	def get_LoginUser(self):
 		connect = sqlite.connect(db_name)

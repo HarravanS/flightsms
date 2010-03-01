@@ -2,7 +2,7 @@
 
 from flightsmslib import *
 
-impostazioni = settings()
+impostazioni = usersetup()
 messaggi = vola_cmd()
 
 def main_menu():
@@ -19,10 +19,10 @@ def main_menu():
 		username, password = loginUPData()
 		dest = raw_input("receiver: ")
 		smesg = raw_input("message: ")
-		messaggi.send_Message(username,password,1,"flightsms",[dest],smesg,"0000-00-00","00:00")
+		print parse_Result("14",messaggi.send_Message(username,password,1,"flightsms",[dest],smesg,"0000-00-00","00:00"))
 	elif m_action == ("c" or "C"):
 		username, password = loginUPData()
-		print messaggi.get_Credit(username,password)
+		print parse_Result("1",messaggi.get_Credit(username,password))
 		m_action = ""
 		main_menu()
 	elif m_action == "Q":
