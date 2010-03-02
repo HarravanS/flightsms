@@ -45,4 +45,14 @@ class vola_cmd:
 		#return gw_answer
 	
 	#cmd 32 - get sender list
+	def get_SenderList():
+		pass
+	
+	#cmd 30 - insert new sender
+	def new_Sender():
+		pass
+	
+	#cmd 31 - delete sender
+	def del_Sender():
+		pass
 	
